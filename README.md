@@ -1,24 +1,21 @@
-# README
+# ModalWindowSample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+jQueryで簡単なモーダルウィンドウを実装。  
+アニメーションでウィンドウの動きを滑らかにしている。  
 
-Things you may want to cover:
+#### 言語
 
-* Ruby version
+* Ruby 2.6.4
 
-* System dependencies
+#### フレームワーク
 
-* Configuration
+* Ruby on Rails 6
 
-* Database creation
+#### ライブラリ
 
-* Database initialization
+* jQuery 3.5.1
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+#### ツール
 
-* Deployment instructions
-
-* ...
+* webpack
