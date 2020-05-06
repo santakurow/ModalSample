@@ -1,4 +1,4 @@
-# ModalWindowSample
+# ModalSample
 
 jQueryで簡単なモーダルウィンドウを実装。  
 アニメーションでウィンドウの動きを滑らかにしている。  
