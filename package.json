@@ -6,7 +6,12 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "jquery": "^3.5.1",
     "turbolinks": "^5.2.0"
+  },
+  "scripts": {
+    "build": "./bin/webpack",
+    "start": "./bin/webpack-dev-server"
   },
   "version": "0.1.0",
   "devDependencies": {
