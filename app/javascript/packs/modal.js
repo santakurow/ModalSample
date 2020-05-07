@@ -16,7 +16,7 @@ $(function () {
                     </div>`
 
 
-  $(document).on("click", ".modal-action__btn", function (e) {
+  $(".modal-action__btn").on("click", function (e) {
     e.preventDefault();
     // $("#modal-wrapper").append(appendHTML);
     // $("#modal-window").css("tranform", "translate(0, -200px)");
@@ -24,20 +24,35 @@ $(function () {
     $("#modal-window").animate({ display: "block" }, {
       start: function () {
         $("#modal-window").fadeIn(500);
-    }, queue: false}).animate({ top: "300px" }, {duration: 600, queue: false});
+      }, queue: false
+    }).animate({ top: "300px" }, { duration: 600, queue: false });
+  
   })
-
-  $("#modal").on("click", function (e) {
+  
+  function isModalWindow(e) {
     let window = $("#modal-window");
     let offset = $(window).offset();
     let width = $(window).width();
     let height = $(window).height();
-    if (offset.left < e.pageX && e.pageX < offset.left + width && offset.top < e.pageY && e.pageY < offset.top + height) {
-      return false
-    }
-    else {
+    return (offset.left < e.pageX && e.pageX < offset.left + width && offset.top < e.pageY && e.pageY < offset.top + height);
+  }
+  
+  $("#modal").on("click", function (e) {
+    // let window = $("#modal-window");
+    // let offset = $(window).offset();
+    // let width = $(window).width();
+    // let height = $(window).height();
+    if (!isModalWindow(e)) {
       $(this).css("display", "none");
       $("#modal-window").removeAttr("style");
     }
+    else {
+
+    }
+    
   })
+  // $(document).on("submit", "#new_user", function (e) {
+  //   e.preventDefault();
+  //   alert("success");
+  // })
 })
