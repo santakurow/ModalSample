@@ -1,5 +1,8 @@
 #modal-field-wrapper
-  %h1.title ModalWindow
+  - unless user_signed_in?
+    %h1.title ModalWindow
+  - else
+    %h1.title Hello World!
 
   .modal-action
     = link_to "Signup Now!", "#", class: "modal-action__btn"
@@ -8,7 +11,7 @@
     %br
     %p
       ログイン中: ID #{current_user.email}
-    = link_to "Logout", destroy_user_session_path, method: :delete
+    = link_to "Logout", destroy_user_session_path, method: :delete, style: "color: red; font-weight: bold;", data: {confirm: "ログアウトしますか？" }
 
 #modal-wrapper
   #modal
