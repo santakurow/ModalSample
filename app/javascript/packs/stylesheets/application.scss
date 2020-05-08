@@ -11,6 +11,25 @@
   background: whitesmoke;
 }
 
+.signup-form {
+  display: none;
+}
+
+.login {
+  display: inline-block;
+  margin: 18px 0;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.login-form {
+  display: none;
+}
+
 #modal-field-wrapper {
   padding: 30px 0;
   text-align: center;
@@ -21,10 +40,10 @@
   
   .modal-action {
     display: inline-block;
-    background: dodgerblue;
-    border-radius: 5px;
     box-shadow: 0 6px 0 blue;
     position: relative;
+    border-radius: 5px;
+    background: dodgerblue;
     &__btn {
       display: block;
       text-decoration: none;
@@ -68,7 +87,7 @@
         border-bottom: 1px solid gray;
       }
       &__form {
-        padding: 8px;
+        padding: 10px;
 
         .field {
           margin: 10px 0;

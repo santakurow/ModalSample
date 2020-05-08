@@ -5,15 +5,15 @@ $(function(){
     window.location.replace("<%= root_url %>");
   }
   else {
-    let email = `<div class="error_email" style="color: red;"><%= resource.errors[:email][0] %></div>`;
+    const email = `<div class="error_email" style="color: red;"><%= resource.errors[:email][0] %></div>`;
     $(".error_email").remove();
     $("#user_email").before(email);
 
-    let password = `<div class="error_password" style="color: red;"><%= resource.errors[:password][0] %></div>`;
+    const password = `<div class="error_password" style="color: red;"><%= resource.errors[:password][0] %></div>`;
     $(".error_password").remove();
     $("#user_password").before(password);
 
-    let password_confirmation = `<div class="error_password_confirmation" style="color: red;"><%= resource.errors[:password_confirmation][0] %></div>`;
+    const password_confirmation = `<div class="error_password_confirmation" style="color: red;"><%= resource.errors[:password_confirmation][0] %></div>`;
     $(".error_password_confirmation").remove();
     $("#user_password_confirmation").before(password_confirmation);
   }

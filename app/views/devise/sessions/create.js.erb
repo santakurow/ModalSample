@@ -1,0 +1,15 @@
+$(".new_user").on("ajax:success", function(e){
+  const resource = `<%= @valid_res %>`;
+  console.log(resource);
+  if (resource === false) {
+    console.log("success!");
+    console.log(resource);
+  }
+  else {
+    $(".error").html(`<div style="color: red;"><p>Invalid Email or Password.</p></div>`)
+    console.log(resource);
+  }
+})
+.on("ajax:error", function(){
+  console.log("error")
+})
