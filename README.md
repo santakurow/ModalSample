@@ -25,4 +25,5 @@ jQueryで簡単なモーダルウィンドウを実装。
 
 * devise (gem)
 * haml-rails (gem)
+* pry-byebug (gem)
 * webpack
